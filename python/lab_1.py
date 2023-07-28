@@ -1,34 +1,3 @@
-#task1
-"""add your info in Variables then print them. 
-
-firstname 
-lastname 
-email 
-address 
-intake
-"""
-from curses.ascii import isdigit
-
-
-firstname="Rawan"
-lastname="Elghali"
-email="Rawanhamza8@gmail.com"
-address="Mansoura"
-intake=44
-print(firstname)
-print(lastname)
-print(email)
-print(address)
-print(intake)
-
-#task2
-"""write a paragraph about yourself in 5 lines -make sure that the string is stored as a multiline string -"""
-info_details= """My name is {firstname} {lastname}" 
-my email is {email} 
-my address is {address} 
-my intake number is {intake}"""
-print(info_details.format(firstname=firstname , lastname= lastname , email=email , address=address , intake=intake))
-
 #task3
 """Given the total marks of a student→ write a program that prints the grade of a student as follows:
 ○Grade < 60 failed.
@@ -90,11 +59,6 @@ else:
             print("Negative")
     else:
         print("Enter a valid number")
-
-#task6
-"""print the types of variables you entered before"""
-print("type of first name is " ,type(firstname) , "type of last name is "  ,type(lastname) ,
-      "type of email is "  ,type(email) , "type of address is " ,type(address) , "type of intake is "  ,type(intake))
 
 #task7
 """given 2 numbers 
