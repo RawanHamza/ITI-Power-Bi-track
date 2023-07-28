@@ -1,3 +1,34 @@
+#task1
+"""add your info in Variables then print them. 
+
+firstname 
+lastname 
+email 
+address 
+intake
+"""
+from curses.ascii import isdigit
+
+
+firstname="Rawan"
+lastname="Elghali"
+email="Rawanhamza8@gmail.com"
+address="Mansoura"
+intake=44
+print(firstname)
+print(lastname)
+print(email)
+print(address)
+print(intake)
+
+#task2
+"""write a paragraph about yourself in 5 lines -make sure that the string is stored as a multiline string -"""
+info_details= """My name is {firstname} {lastname}" 
+my email is {email} 
+my address is {address} 
+my intake number is {intake}"""
+print(info_details.format(firstname=firstname , lastname= lastname , email=email , address=address , intake=intake))
+
 #task3
 """Given the total marks of a student→ write a program that prints the grade of a student as follows:
 ○Grade < 60 failed.
@@ -59,6 +90,11 @@ else:
             print("Negative")
     else:
         print("Enter a valid number")
+
+#task6
+"""print the types of variables you entered before"""
+print("type of first name is " ,type(firstname) , "type of last name is "  ,type(lastname) ,
+      "type of email is "  ,type(email) , "type of address is " ,type(address) , "type of intake is "  ,type(intake))
 
 #task7
 """given 2 numbers 
@@ -145,11 +181,30 @@ else:
 
 """5 Ask the user to enter the radius of a circle"""
 radius=input("please enter the radius of circle: ")
-"""Calculate the circumference and the area of the circle."""
+"""6 Calculate the circumference and the area of the circle."""
 if radius.isdigit():
+    radius=int(radius)
     cir=2*3.14*radius
-    area=3014*3014*radius
-print(cir , area)
+    area=3.14*3.14*radius
+    print("circumference is: ", cir ,"Area is: ", area)
+else:
+    print("please enter a valid number")
 
-"""Ask the user to enter the length and the height of a rectangle and calculate
+"""7 Ask the user to enter the length and the height of a rectangle and calculate
  the circumference and the area."""
+rec_length=input("Please Enter the length: ")
+rec_height=input("Please Enter the height: ")
+if rec_length.isdigit() and rec_height.isdigit():
+    rec_length=int(rec_length)
+    rec_height=int(rec_height)
+    rec_cir=(rec_height+rec_length)*2
+    rec_area=rec_length*rec_height
+    print("circumference is: ", rec_cir ,"Area is: ", rec_area)
+else:
+    print("please enter a valid number")
+"""8 Ask the user to enter his first name, and last name and print the full name 
+using format string and concatenation """
+first_name=input("Please Enter Your first name: ")
+last_name=input("Please Enter Your Last Name: ")
+full_name="""Hello {first_name} {last_name}"""
+print(full_name.format(first_name=first_name , last_name=last_name))
